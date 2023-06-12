@@ -3,19 +3,21 @@
 #include <string>
 #include <list> 
 
+using namespace std;
+
 class cFecha
 {
 
-private: 
-	
-	string dia; 
-	string mes; 
-	string anyo; 
+private:
 
-public: 
+	string dia;
+	string mes;
+	string anyo;
 
-	cFecha(string Dia, string Mes, string Anyo);
-	~cFecha(); 
+public:
 
-}
+	cFecha(string _Dia, string _Mes, string _Anyo);
+	~cFecha();
+
+};
 

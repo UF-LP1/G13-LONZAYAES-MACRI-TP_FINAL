@@ -1,12 +1,12 @@
 #include "cPaciente.h"
 
-cPaciente::cPaciente(string Nombre, string Apellido, const unsigned int DNI, string Alergia, string Hospital, float Radio): DNI(dni)
+cPaciente::cPaciente(string _Nombre, string _Apellido, const unsigned int _DNI, string _Alergia, string _Hospital, float _Radio): DNI(_DNI)
 {
-	this->nombre = Nombre; 
-	this->apellido = Apellido; 
-	this->alergia = Alergia; 
-	this->hospital = Hospital; 
-	this->radio = Radio; 
+	this->Nombre = _Nombre; 
+	this->Apellido = _Apellido; 
+	this->Alergia = _Alergia; 
+	this->Hospital = _Hospital; 
+	this->Radio = _Radio; 
 }
 
 cPaciente:: ~cPaciente()

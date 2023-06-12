@@ -15,8 +15,8 @@ private:
 
 public:
 
-	cFabricante(string Nombre, const unsigned int ID_fabricante)
-	~cFabricante(); 
-}
+	cFabricante(string _Nombre, const unsigned int _ID_fabricante);
+	~cFabricante();
+};
 
 

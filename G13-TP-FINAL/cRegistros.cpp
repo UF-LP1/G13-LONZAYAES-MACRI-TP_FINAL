@@ -1,13 +1,13 @@
 #include "cRegistros.h"
 
-cRegistros :: cRegistros(cHospital Hospital, cMedico Medico, cFecha Fecha_sol, cFecha Fecha_est_entrega, bool Entregada, cPaciente Paciente)
+cRegistros :: cRegistros(cHospital &_Hospital, cMedico &_Medico, cFecha &_Fecha_sol, cFecha &_Fecha_est_entrega, bool _Entregada, cPaciente &_Paciente)
 {
-	this->hospital = Hospital; 
-	this->medico = Medico; 
-	this->fecha_sol = Fecha_sol; 
-	this->fecha_est_entrega = Fecha_est_entrega; 
-	this->entregada = Entregada; 
-	this->paciente = Paciente; 
+	this->Hospital = &_Hospital; 
+	this->Medico = &_Medico; 
+	this->Fecha_sol = &_Fecha_sol; 
+	this->Fecha_est_entrega = &_Fecha_est_entrega; 
+	this->Entregada = _Entregada; 
+	this->Paciente = &_Paciente; 
 }
 
 cRegistros :: ~cRegistros()

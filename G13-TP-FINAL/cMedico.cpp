@@ -1,10 +1,9 @@
 #include "cMedico.h"
 
-cMedico :: cMedico ( string Nombre, string Apellido, const unsigned int Matricula)
+cMedico :: cMedico ( string _Nombre, string _Apellido, const unsigned int _Matricula) : Matricula(_Matricula)
 { 
-    // no se como inicializar el const de la matricula 
-    this->nomnbre = Nombre; 
-    this->apellido = Apellido; 
+    this->Nombre = _Nombre; 
+    this->Apellido = _Apellido; 
 } 
 
 cMedico :: ~cMedico()

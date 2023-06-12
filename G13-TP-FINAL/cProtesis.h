@@ -2,19 +2,19 @@
 #include <iostream>
 #include <string>
 #include <list>  
-#include 'cFecha'
+#include "cFecha.h"
 
 class cProtesis
 {
 private: 
 
-	string dimension; 
-	string material; 
-	string fabricante; 
-	cFecha fecha_fab;
+	string Dimension; 
+	string Material; 
+	string Fabricante; 
+	cFecha *Fecha_fab;
 
 public: 
-	cProtesis(string Dimension, string Material, string Fabricante, cFecha Fecha_fab);
+	cProtesis(string _Dimension, string _Material, string _Fabricante, cFecha &_Fecha_fab);
 	~cProtesis(); 
 
 };

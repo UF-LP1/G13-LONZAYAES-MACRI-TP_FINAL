@@ -1,13 +1,12 @@
 #include "cHospital.h"
 
-cHospital::cHospital(string Nombre, string Direccion, const unsigned int Num_identificacion, list <cMedico>& Lista_Medicos, list <cPaciente>& Lista_Pacientes) :Num_identificacion(num_identificacion)
+cHospital::cHospital(string _Nombre, string _Direccion, const unsigned int _Num_identificacion, list <cMedico>& _Lista_Medicos, list <cPaciente>& _Lista_Pacientes) :Num_identificacion(_Num_identificacion)
 
-// no se como inicializar el numero de identificacion que es const
 {
-	this->nombre = Nombre;
-	this->direccion = Direccion;
-	this->lista_Medicos = Lista_Medicos;
-	this->lista_Pacientes = Lista_Pacientes;
+	this->nombre = _Nombre;
+	this->direccion = _Direccion;
+	this->lista_Medicos = &_Lista_Medicos;
+	this->lista_Pacientes = &_Lista_Pacientes;
 
 }
 

@@ -1,9 +1,8 @@
 #include "cFabricante.h"
 
-cFabricante::cFabricante(string Nombre_, const unsigned int ID_fabricante_) : ID_fabricante_(ID_fabricante)
+cFabricante::cFabricante(string _Nombre, const unsigned int _ID_fabricante_) : ID_fabricante(_ID_fabricante_)
 {
-	this->Nombre = Nombre_; 
-	this->ID_fabricante = ID_fabricante_; 
+	this->Nombre = _Nombre; 
 
 } 
 

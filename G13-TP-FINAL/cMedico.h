@@ -3,17 +3,19 @@
 #include <string>
 #include <list> 
 
+using namespace std;
+
 class cMedico
 { 
 private : 
 	  
-	string nombre;
+	string Nombre;
 	string Apellido; 
-	const unsigned int matricula; 
+	const unsigned int Matricula; 
 
 public: 
 
-	cMedico(string Nombre, string Apellido, const unsigned int Matricula); 
+	cMedico(string _Nombre, string _Apellido, const unsigned int _Matricula); 
 	~cMedico(); 
 };
 

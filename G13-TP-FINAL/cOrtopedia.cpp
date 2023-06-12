@@ -1,10 +1,10 @@
 #include "cOrtopedia.h"
 
-cOrtopedia :: cOrtopedia(string Nombre, string Direccion, const unsigned int Num_habilitacion, list <cProtesis> &Lista_protesis): Num_habilitacion(num_hablilitacion)
+cOrtopedia :: cOrtopedia(string _Nombre, string _Direccion, const unsigned int _Num_habilitacion, list <cProtesis> &_Lista_protesis): Num_habilitacion(_Num_habilitacion)
 {
-	this->nombre = Nombre; 
-	this->direccion = Direccion; 
-	this->lista_protesis = Lista_protesis; 
+	this->Nombre = _Nombre; 
+	this->Direccion = _Direccion; 
+	this->Lista_protesis = &_Lista_protesis; 
 
 }
 

@@ -1,9 +1,11 @@
 #include "cFecha.h"
-cFecha::cFecha(string Dia, string Mes, string Anyo)
+
+
+cFecha::cFecha(string _Dia, string _Mes, string _Anyo)
 {
-	this->dia = Dia; 
-	this->mes = Mes; 
-	this->anyo = anyo; 
+	this->dia = _Dia; 
+	this->mes = _Mes; 
+	this->anyo = _Anyo; 
 }
 
 cFecha :: ~cFecha()

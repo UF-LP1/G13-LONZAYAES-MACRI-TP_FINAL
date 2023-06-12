@@ -2,19 +2,21 @@
 #include <iostream>
 #include <string>
 #include <list> 
-#include 'cProtesis.h'
+#include "cProtesis.h"
+
+using namespace std;
 
 class cOrtopedia
 {
-private: 
+private:
 
-	string nombre; 
-	string direccion; 
-	const unsigned int num_hablilitacion; 
-	list <cProtesis> *lista_protesis; 
+	string Nombre;
+	string Direccion;
+	const unsigned int Num_habilitacion;
+	list <cProtesis>* Lista_protesis;
 
-public: 
-	cOrtopedia(string Nombre, string Direccion, const unsigned int Num_habilitacion, list <cProtesis>& Lista_protesis);
-	~cOrtopedia(); 
-}
+public:
+	cOrtopedia(string Nombre, string _Direccion, const unsigned int _Num_habilitacion, list <cProtesis>& _Lista_protesis);
+	~cOrtopedia();
+};
 
