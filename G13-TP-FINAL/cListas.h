@@ -1,6 +1,7 @@
 #pragma once
 #include <list>
-
+#include <exception>
+#include <iostream>
 
 using namespace std;
 
@@ -33,7 +34,7 @@ public:
 	
 	friend ostream& operator<<(ostream& out, cListas<T>& Lista);
 	
-	void operator==(T* Elemento);
+	bool operator==(T* Elemento);
 
 	
 
@@ -56,12 +57,16 @@ inline cListas<T>::~cListas()
 template<class T>
 inline T* cListas<T>::Buscar(int Referencia)
 {
-	return *T();
+	for (std::list<T>::iterator it = this->Lista->begin(); it != this->Lista->end(); it++) {
+
+		if (it->GetCodigo() == Referencia) return T;
+	}
 }
 
 template<class T>
 inline void cListas<T>::Agregar()
 {
+	
 }
 
 template<class T>
@@ -81,15 +86,38 @@ inline void cListas<T>::Eliminar(int Referencia)
 template<class T>
 inline void cListas<T>::operator+(T* NuevoElemento)
 {
+	if(NuevoElemento != NULL) this->Lista->push_back(NuevoElemento);
 }
 
 template<class T>
 inline void cListas<T>::operator-(T* ElementoASacar)
 {
+
+	this->Lista->erase(ElementoASacar);
+	/*try {
+		this->Lista->erase(ElementoASacar);
+	}
+	catch (exception* e) {
+
+		cout << e.what() << endl;
+		delete e;
+	}
+*/
 }
 
 template<class T>
-inline void cListas<T>::operator==(T* Elemento)
+inline bool cListas<T>::operator==(T* Elemento)
 {
+	for (std::list<T>::iterator it = this->Lista->begin(); it != this->Lista->end(); it++) {
+
+		if(it == Elemento) return true
+	}
+	return false
+}
+
+template<class T>
+inline ostream& operator<<(ostream& out, cListas<T>& Lista)
+{
+
 }
 
