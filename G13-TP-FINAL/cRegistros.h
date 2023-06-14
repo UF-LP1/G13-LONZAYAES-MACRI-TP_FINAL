@@ -3,7 +3,6 @@
 #include <string>
 #include <list> 
 #include "cHospital.h"
-#include "cAnpa.h"
 #include "cOrtopedia.h"
 #include "cProtesis.h"
 #include "cFecha.h"

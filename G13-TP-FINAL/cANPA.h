@@ -19,7 +19,7 @@ private:
 
 public:
 
-	cANPA(list <cRegistros> &_Lista_Registros, list <cOrtopedia> &_Lista_Ortopedias, list <cHospital> &_Lista_Hospitales);
+	cANPA(list <cOrtopedia> &_Lista_Ortopedias, list <cHospital> &_Lista_Hospitales);
 
 	~cANPA();
 
