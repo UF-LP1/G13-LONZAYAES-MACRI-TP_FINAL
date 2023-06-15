@@ -2,6 +2,8 @@
 #include <list>
 #include <exception>
 #include <iostream>
+#include "cANPA.h"
+#include "cHospital.h"
 
 using namespace std;
 
@@ -12,7 +14,10 @@ protected:
 
 	list <T> *Lista;
 
-	friend class cANPA;  //Hacemos friend a ANPA para mejor manejo de sus listas
+	//Hacemos friend a las clases que utilizan esta template
+
+	friend class cANPA; 
+	//friend class cHospital;
 
 public:
 
@@ -22,11 +27,11 @@ public:
 
 	T* Buscar(int Referencia);
 
-	void Agregar();
-
 	T* Quitar(int Referencia);
 
-	void Eliminar(int Referencia);
+	void Agregar(T *Elemento);
+
+	void Eliminar(T* Elemento);
 
 	void operator+(T* NuevoElemento);
 	
@@ -57,16 +62,15 @@ inline cListas<T>::~cListas()
 template<class T>
 inline T* cListas<T>::Buscar(int Referencia)
 {
-	for (std::list<T>::iterator it = this->Lista->begin(); it != this->Lista->end(); it++) {
+	T* Aux = nullptr;
 
-		if (it->GetCodigo() == Referencia) return T;
+	typename::list<T>::iterator it;
+
+	for (it = this->Lista->begin(); it != this->Lista->end(); it++) {
+
+		if (it->GetCodigo() == Referencia) return it;
 	}
-}
-
-template<class T>
-inline void cListas<T>::Agregar()
-{
-	
+	return Aux;
 }
 
 template<class T>
@@ -76,9 +80,19 @@ inline T* cListas<T>::Quitar(int Referencia)
 }
 
 template<class T>
-inline void cListas<T>::Eliminar(int Referencia)
+inline void cListas<T>::Agregar(T* Elemento)
 {
+	this->Lista->push_back(Elemento);
 }
+
+template<class T>
+inline void cListas<T>::Eliminar(T* Elemento)
+{
+	T* Aux = this->Agregar(Elemento);
+
+	if (Aux != nullptr) Lista->erase(Elemento);
+}
+
 
 //                               ------------------------------ SOBRECARGAS ------------------------------
 
@@ -86,33 +100,25 @@ inline void cListas<T>::Eliminar(int Referencia)
 template<class T>
 inline void cListas<T>::operator+(T* NuevoElemento)
 {
-	if(NuevoElemento != NULL) this->Lista->push_back(NuevoElemento);
+	this->Agregar(NuevoElemento);
 }
 
 template<class T>
 inline void cListas<T>::operator-(T* ElementoASacar)
 {
-
-	this->Lista->erase(ElementoASacar);
-	/*try {
-		this->Lista->erase(ElementoASacar);
-	}
-	catch (exception* e) {
-
-		cout << e.what() << endl;
-		delete e;
-	}
-*/
+	this->Eliminar(ElementoASacar);
 }
 
 template<class T>
 inline bool cListas<T>::operator==(T* Elemento)
 {
-	for (std::list<T>::iterator it = this->Lista->begin(); it != this->Lista->end(); it++) {
+	typename::list<T>::iterator it = nullptr;
+	
+	for (it = this->Lista->begin(); it != this->Lista->end(); it++) {
 
-		if(it == Elemento) return true
+		if (it == Elemento) return true;
 	}
-	return false
+	return false;
 }
 
 template<class T>

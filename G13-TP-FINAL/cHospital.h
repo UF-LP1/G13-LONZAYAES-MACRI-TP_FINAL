@@ -20,6 +20,8 @@ private:
 public: 
 	cHospital(string _nombre, string _direccion, const unsigned int _Num_identificacion, list <cMedico> &_lista_Medicos, list <cPaciente> &_lista_Pacientes);
 	~cHospital(); 
+
+	void Agregar(cPaciente* Paciente);
 		
 };
 

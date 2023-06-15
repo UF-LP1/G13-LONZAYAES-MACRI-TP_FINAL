@@ -1,6 +1,6 @@
 #include "cANPA.h"
 
-cANPA::cANPA(list<cOrtopedia>& _Lista_Ortopedias, list<cHospital>& _Lista_Hospitales)
+cANPA::cANPA(cListas<cOrtopedia>& _Lista_Ortopedias, cListas<cHospital>& _Lista_Hospitales)
 {
 	this->Lista_Registros = NULL;
 	this->Lista_Ortopedias = &_Lista_Ortopedias;
@@ -8,3 +8,10 @@ cANPA::cANPA(list<cOrtopedia>& _Lista_Ortopedias, list<cHospital>& _Lista_Hospit
 }
 
 cANPA::~cANPA() {}
+
+void cANPA::AgregarRegistro(cRegistros *Registro)
+{
+	
+	(*Lista_Registros) + Registro;
+
+}

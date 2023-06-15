@@ -13,3 +13,8 @@ cHospital::cHospital(string _Nombre, string _Direccion, const unsigned int _Num_
 
 cHospital :: ~cHospital()
 {}
+
+void cHospital::Agregar(cPaciente *Paciente)
+{
+	//this->lista_Pacientes + Paciente;
+}

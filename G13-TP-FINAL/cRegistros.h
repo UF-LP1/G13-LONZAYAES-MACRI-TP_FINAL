@@ -1,7 +1,5 @@
 #pragma once
-#include <iostream>
-#include <string>
-#include <list> 
+
 #include "cHospital.h"
 #include "cOrtopedia.h"
 #include "cProtesis.h"
@@ -12,7 +10,7 @@ class cRegistros
 
 private: 
 
-	cHospital *Hospital; 
+	cHospital* Hospital;
 	cMedico *Medico; 
 	cFecha *Fecha_sol; 
 	cFecha *Fecha_est_entrega; 
