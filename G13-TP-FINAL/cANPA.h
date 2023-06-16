@@ -1,4 +1,6 @@
-#pragma once
+#ifndef _CANPA_H_
+#define _CANPA_H_
+
 #include <iostream>
 #include <string>
 #include "cListas.h"
@@ -25,6 +27,8 @@ public:
 
 	void AgregarRegistro(cRegistros *Registro);
 
+	
+
 
 };
-
+#endif

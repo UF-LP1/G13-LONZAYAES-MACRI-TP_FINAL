@@ -2,8 +2,7 @@
 #include <list>
 #include <exception>
 #include <iostream>
-#include "cANPA.h"
-#include "cHospital.h"
+
 
 using namespace std;
 
@@ -12,12 +11,13 @@ class cListas
 {
 protected:
 
-	list <T> *Lista;
+	list <T> Lista;
 
 	//Hacemos friend a las clases que utilizan esta template
 
-	friend class cANPA; 
+	//friend class cANPA; 
 	//friend class cHospital;
+	//friend class cRegistros;
 
 public:
 
@@ -32,6 +32,12 @@ public:
 	void Agregar(T *Elemento);
 
 	void Eliminar(T* Elemento);
+
+	int Size();
+
+	T* Inicio();
+
+	T* Fin();
 
 	void operator+(T* NuevoElemento);
 	
@@ -82,16 +88,40 @@ inline T* cListas<T>::Quitar(int Referencia)
 template<class T>
 inline void cListas<T>::Agregar(T* Elemento)
 {
-	this->Lista->push_back(Elemento);
+	this->Lista.push_back(*Elemento);
 }
 
 template<class T>
 inline void cListas<T>::Eliminar(T* Elemento)
 {
-	T* Aux = this->Agregar(Elemento);
 
-	if (Aux != nullptr) Lista->erase(Elemento);
+	if (Elemento != nullptr) Lista.erase(Elemento);
 }
+
+template<class T>
+inline int cListas<T>::Size()
+{
+	
+	if (this->Lista.size() > 0)return this->Lista.size();
+	else return 0;
+}
+
+template<class T>
+inline T* cListas<T>::Inicio()
+{
+	typename::list<T>::iterator it = this->Lista.begin();
+
+	return *it;
+}
+
+template<class T>
+inline T* cListas<T>::Fin()
+{
+	typename::list<T>::iterator it = this->Lista.end();
+
+	return *it;
+}
+
 
 
 //                               ------------------------------ SOBRECARGAS ------------------------------

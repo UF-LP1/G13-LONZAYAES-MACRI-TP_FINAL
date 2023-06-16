@@ -11,3 +11,8 @@ cPaciente::cPaciente(string _Nombre, string _Apellido, const unsigned int _DNI, 
 
 cPaciente:: ~cPaciente()
 {}
+
+void cPaciente::PedirProtesis()
+{
+	//this->Hospital
+}

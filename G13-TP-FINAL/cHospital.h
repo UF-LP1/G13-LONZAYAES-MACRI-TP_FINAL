@@ -1,8 +1,7 @@
+#ifndef _CHOSPITAL_H_
+#define _CHOSPITAL_H_
 
-#pragma once
-#include <iostream>
-#include <string>
-#include <list> 
+#include "cListas.h"
 #include "cMedico.h"
 #include "cPaciente.h"
 
@@ -14,14 +13,16 @@ private:
 	string nombre; 
 	string direccion; 
 	const unsigned int Num_identificacion; 
-	list <cMedico>* lista_Medicos;
-	list <cPaciente>* lista_Pacientes;
+	cListas <cMedico>* lista_Medicos;
+	cListas <cPaciente>* lista_Pacientes;
 
 public: 
-	cHospital(string _nombre, string _direccion, const unsigned int _Num_identificacion, list <cMedico> &_lista_Medicos, list <cPaciente> &_lista_Pacientes);
+	cHospital(string _nombre, string _direccion, const unsigned int _Num_identificacion, cListas <cMedico> &_lista_Medicos, cListas <cPaciente> &_lista_Pacientes);
 	~cHospital(); 
 
 	void Agregar(cPaciente* Paciente);
+
+	cMedico AsignarMedico();
 		
 };
-
+#endif

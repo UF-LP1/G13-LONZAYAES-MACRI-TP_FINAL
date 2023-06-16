@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _CREGISTROS_H_
+#define _CREGISTROS_H_
 
 #include "cHospital.h"
 #include "cOrtopedia.h"
@@ -23,4 +24,4 @@ public:
 	cRegistros(cHospital &_Hospital, cMedico &_Medico, cFecha &_Fecha_sol, cFecha &_Fecha_est_entrega, bool _Entregada, cPaciente &_Paciente);
 	~cRegistros(); 
 };
-
+#endif
