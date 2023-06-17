@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include <list> 
+#include "cProtesis.h"
 
 using namespace std;
 
@@ -15,6 +15,8 @@ private:
 	string Alergia; 
 	string Hospital; 
 	float Radio; 
+
+	cProtesis* Protesis;
 
 
 public: 

@@ -43,9 +43,9 @@ public:
 	
 	void operator-(T* ElementoASacar);
 	
-	friend ostream& operator<<(ostream& out, cListas<T>& Lista);
-	
 	bool operator==(T* Elemento);
+
+	T operator[](int pos);
 
 	
 
@@ -54,16 +54,10 @@ public:
 //                                 ------------------------------ METODOS ------------------------------
 
 template<class T>
-inline cListas<T>::cListas()
-{
-	this->Lista = NULL;
-}
+inline cListas<T>::cListas() {}
 
 template<class T>
-inline cListas<T>::~cListas()
-{
-	this->Lista = NULL;
-}
+inline cListas<T>::~cListas() {}
 
 template<class T>
 inline T* cListas<T>::Buscar(int Referencia)
@@ -152,8 +146,21 @@ inline bool cListas<T>::operator==(T* Elemento)
 }
 
 template<class T>
-inline ostream& operator<<(ostream& out, cListas<T>& Lista)
+inline T cListas<T>::operator[](int pos)
 {
+	typename::list<T>::iterator it;
 
+	int Cont = 0;
+
+	if (this->Lista.size() >= pos) {
+
+		for (it = this->Lista.begin(); it != this->Lista.end(); it++) {
+
+			if (Cont == pos)return *it;
+
+			Cont++;
+		}
+	}
+	
 }
 

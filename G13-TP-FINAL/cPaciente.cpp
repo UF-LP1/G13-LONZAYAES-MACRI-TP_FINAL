@@ -7,10 +7,14 @@ cPaciente::cPaciente(string _Nombre, string _Apellido, const unsigned int _DNI, 
 	this->Alergia = _Alergia; 
 	this->Hospital = _Hospital; 
 	this->Radio = _Radio; 
+
+	this->Protesis = NULL;
 }
 
-cPaciente:: ~cPaciente()
-{}
+cPaciente:: ~cPaciente(){
+
+	this->Protesis = NULL;
+}
 
 void cPaciente::PedirProtesis()
 {

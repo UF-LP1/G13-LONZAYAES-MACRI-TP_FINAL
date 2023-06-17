@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include <list> 
+#include "cListas.h" 
 
 using namespace std;
 
@@ -17,5 +17,7 @@ public:
 
 	cMedico(string _Nombre, string _Apellido, const unsigned int _Matricula); 
 	~cMedico(); 
+
+	friend ostream& operator<<(ostream& out, cListas<cMedico>& Lista);
 };
 
