@@ -16,24 +16,16 @@ void CargarFabricantes(cListas<cFabricante>& ListaFabricantes)
 
 }
 
-void CargarMedicos(cListas<cMedico>& ListaMedicos)
-{
-	cMedico* Medico1 = new cMedico("Callie", "Torres", "44456");
-	cMedico* Medico2 = new cMedico("Derek", "Shepherd", "33467");
-	cMedico* Medico3 = new cMedico("Miranda", "Bailey", "28906"); 
-	cMedico* Medico4 = new cMedico("Arizona", "Robins", "45120"); 
-	cMedico* Medico5 = new cMedico("Meredith", "Grey", "66892");
 
-	ListaMedicos.Agregar(Medico1);
-	ListaMedicos.Agregar(Medico2);
-	ListaMedicos.Agregar(Medico3);
-	ListaMedicos.Agregar(Medico4);
-	ListaMedicos.Agregar(Medico5);
-
-
-}
 
 void CargarHospitales(cListas <cHospital>& ListaHospitales)
+
+/*en esta funcion cargamos por un lado listas con medicos para cada hospital y despues a
+  cada hospital le cargamos su lista correspondiente de medicos (esto es para que todos los hospitales
+  no tengan exactamente la misma lista de medicos), si bien hay medicos vinculados a más de un hospital
+  la idea es que todos los hospitales tengan listas de medicos distintas entre si !
+*/
+
 {
 
 	cListas <cMedico> ListaMedicos_favaloro; 
@@ -63,12 +55,14 @@ void CargarHospitales(cListas <cHospital>& ListaHospitales)
 	ListaMedicos_favaloro.Agregar(Medico2);
     ListaMedicos_favaloro.Agregar(Medico3);
 	ListaMedicos_favaloro.Agregar(Medico4);
+	ListaMedicos_favaloro.Agregar(Medico16); 
 	ListaMedicos_clinicas.Agregar(Medico5);
 	ListaMedicos_clinicas.Agregar(Medico6);
 	ListaMedicos_clinicas.Agregar(Medico7);
 	ListaMedicos_clinicas.Agregar(Medico8);
 	ListasMedicos_modelo.Agregar(Medico9);
 	ListasMedicos_modelo.Agregar(Medico10);
+	ListasMedicos_modelo.Agregar(Medico2);
 	ListasMedicos_modelo.Agregar(Medico11);
 	ListasMedicos_modelo.Agregar(Medico12);
 	ListasMedicos_swiss.Agregar(Medico13);
@@ -79,10 +73,10 @@ void CargarHospitales(cListas <cHospital>& ListaHospitales)
 
 
 	 
-	cHospital* Hospital1 = new cHospital("Hospital Favaloro", "Avenida Belgrano 234", ListaMedicos_favaloro);
-	cHospital* Hospital2 = new cHospital("Hospital de clinicas", "Avenida Paso 123", ListaMedicos_clinicas);
-	cHospital* Hospital3 = new cHospital("Hospital swiss Medical", "Solis 223", ListasMedicos_swiss);
-	cHospital* Hospital5 = new cHospital("Sanatorio Modelo", "Colon 348", ListasMedicos_modelo);
+	cHospital* Hfavaloro = new cHospital("Hospital Favaloro", "Avenida Belgrano 234", ListaMedicos_favaloro);
+	cHospital* Hclinicas = new cHospital("Hospital de clinicas", "Avenida Paso 123", ListaMedicos_clinicas);
+	cHospital* Hswissmedical = new cHospital("Hospital swiss Medical", "Solis 223", ListasMedicos_swiss);
+	cHospital* Hmodelo = new cHospital("Sanatorio Modelo", "Colon 348", ListasMedicos_modelo);
 }
 
 

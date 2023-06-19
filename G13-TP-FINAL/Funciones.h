@@ -14,5 +14,5 @@
 using namespace std;
 
 void CargarFabricantes(cListas <cFabricante>& ListaFabricantes);
-void CargarMedicos(cListas <cMedico>& ListaMedicos); 
+
 void CargarHospitales(cListas <cHospital>& ListaHospitales); 
