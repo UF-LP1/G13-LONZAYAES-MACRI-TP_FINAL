@@ -20,3 +20,21 @@ void cPaciente::PedirProtesis()
 {
 	//this->Hospital
 }
+
+ostream& operator<<(ostream& out, cListas<cPaciente>& Lista)
+{
+
+    for (int i = 0; i < Lista.Size(); i++) {
+
+
+        out << "--------------------"
+            << "\nNombre: " << (Lista)[i].Nombre
+            << "\nApellido: " << (Lista)[i].Apellido
+			<< "\nDNI: " << (Lista)[i].DNI
+            << "\nAlergia: " << (Lista)[i].Alergia
+			<< "\nHospital: " << (Lista)[i].Hospital
+			<< "\nRadio: " << (Lista)[i].Radio
+            << "--------------------" << endl;
+    }
+
+    return out;

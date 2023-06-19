@@ -12,3 +12,4 @@ cRegistros :: cRegistros(cHospital &_Hospital, cMedico &_Medico, cFecha &_Fecha_
 
 cRegistros :: ~cRegistros()
 {}
+

@@ -18,8 +18,29 @@ Orden de accion:
 int main() {
 
 	cListas <cFabricante> ListaFabricantes;
+	
+	cListas <cHospital> ListaHospitales; 
+	cListas <cProtesis> ListaProtesis; 
+
+	//----------------------------------- INICIALIZACION DE PACIENTES-----------------------------------------//
+	cPaciente* Paciente1 = new cPaciente("Rosario", "Lonzayes", "42833137", "titanio", "Hospital favaloro", 2); 
+	cPaciente* Paciente2 = new cPaciente("Ana", "Perez", "45833137", "plastico", "Hospital swiss medical", 0,5);
+	cPaciente* Paciente3 = new cPaciente("Clarita", "Crux", "42833667", "ninguna", "Sanatorio Modelo", 0);
+	cPaciente* Paciente4 = new cPaciente("Poni", "Ponex", "44563137", "titanio", "Hospital favaloro", 3);
+	cPaciente* Paciente5 = new cPaciente("Cindy", "Aldet", "42833987", "titanio", "Hospital favaloro", 2);
+	cPaciente* Paciente6 = new cPaciente("Pampa", "Pamplix", "32433137", "ninguna", "Hospital swiss medical", 0.7);
+	cPaciente* Paciente7 = new cPaciente("Ezequiel", "Str", "42571137", "titanio", "Hospital swiss medical",0);
+	cPaciente* Paciente8 = new cPaciente("Sol", "Segura", "42833222", "acero", "Hospital de clinicas", 4);
+	cPaciente* Paciente9 = new cPaciente("Sol", "Mala", "42831627", "cobalto", "Hospital de clinicas", 2.6);
+	cPaciente* Paciente10 = new cPaciente("Franco", "Pessana", "33233137", "ninguna", "Hospital de clinicas",0);
+	cPaciente* Paciente11= new cPaciente("Troy", "Bolton", "23543137", "ninguna", "Sanatorio Modelo", 0);
+	cPaciente* Paciente12= new cPaciente("Sharpay", "Evans", "65233137", "ninguna", "Sanatorio Modelo", 0.9);
+//----------------------------------------------------------------------------------------------------------------//
 
 	CargarFabricantes(ListaFabricantes);
+	CargarMedicos(ListaMedicos);
+	CargarHospitales(ListaHospitales); 
+	CargarProtesis(ListaProtesis); 
 
 
 
