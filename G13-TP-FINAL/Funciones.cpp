@@ -18,7 +18,7 @@ void CargarFabricantes(cListas<cFabricante>& ListaFabricantes)
 
 
 
-void CargarHospitales(cListas <cHospital>& ListaHospitales)
+void CargarHospitales(cListas <cHospital>& ListaHospitales) {
 
 /*en esta funcion cargamos por un lado listas con medicos para cada hospital y despues a
   cada hospital le cargamos su lista correspondiente de medicos (esto es para que todos los hospitales
@@ -26,29 +26,29 @@ void CargarHospitales(cListas <cHospital>& ListaHospitales)
   la idea es que todos los hospitales tengan listas de medicos distintas entre si !
 */
 
-{
+
 
 	cListas <cMedico> ListaMedicos_favaloro; 
 	cListas <cMedico> ListaMedicos_clinicas;
 	cListas<cMedico> ListasMedicos_swiss; 
 	cListas <cMedico> ListasMedicos_modelo; 
 
-	cMedico* Medico1 = new cMedico("Callie", "Torres", "44456");
-	cMedico* Medico2 = new cMedico("Derek", "Shepherd", "33467");
-	cMedico* Medico3 = new cMedico("Miranda", "Bailey", "28906");
-	cMedico* Medico4 = new cMedico("Arizona", "Robins", "45120");
-	cMedico* Medico5 = new cMedico("Meredith", "Grey", "66892"); 
-	cMedico* Medico6 = new cMedico("Owen", "Haunt", "333456");
-	cMedico* Medico7 = new cMedico("Cristina", "Yang", "123456");
-	cMedico* Medico8 = new cMedico("Teddy", "Atman", "333567");
-	cMedico* Medico9 = new cMedico("Mark", "Stone", "332246");
-	cMedico* Medico10 = new cMedico("Adison", "Montgomery", "677456");
-	cMedico* Medico11= new cMedico("Amelia", "Shepherd", "847456");
-	cMedico* Medico12= new cMedico("Geoge", "Omali", "284456");
-	cMedico* Medico13= new cMedico("Richard", "webber", "691456");
-	cMedico* Medico14 = new cMedico("Alex", "karev", "288457");
-	cMedico* Medico15= new cMedico("April", "Kepner", "453531");
-	cMedico* Medico16 = new cMedico("Izzie", "Stevens", "333456");
+	cMedico* Medico1 = new cMedico("Callie", "Torres", 44456);
+	cMedico* Medico2 = new cMedico("Derek", "Shepherd", 33467);
+	cMedico* Medico3 = new cMedico("Miranda", "Bailey", 28906);
+	cMedico* Medico4 = new cMedico("Arizona", "Robins", 45120);
+	cMedico* Medico5 = new cMedico("Meredith", "Grey", 66892); 
+	cMedico* Medico6 = new cMedico("Owen", "Haunt", 333456);
+	cMedico* Medico7 = new cMedico("Cristina", "Yang", 123456);
+	cMedico* Medico8 = new cMedico("Teddy", "Atman", 333567);
+	cMedico* Medico9 = new cMedico("Mark", "Stone", 332246);
+	cMedico* Medico10 = new cMedico("Adison", "Montgomery", 677456);
+	cMedico* Medico11= new cMedico("Amelia", "Shepherd", 847456);
+	cMedico* Medico12= new cMedico("Geoge", "Omali", 284456);
+	cMedico* Medico13= new cMedico("Richard", "webber", 691456);
+	cMedico* Medico14 = new cMedico("Alex", "karev", 288457);
+	cMedico* Medico15= new cMedico("April", "Kepner", 453531);
+	cMedico* Medico16 = new cMedico("Izzie", "Stevens", 333456);
 
 
 	ListaMedicos_favaloro.Agregar(Medico1); 
@@ -73,10 +73,10 @@ void CargarHospitales(cListas <cHospital>& ListaHospitales)
 
 
 	 
-	cHospital* Hfavaloro = new cHospital("Hospital Favaloro", "Avenida Belgrano 234", ListaMedicos_favaloro);
-	cHospital* Hclinicas = new cHospital("Hospital de clinicas", "Avenida Paso 123", ListaMedicos_clinicas);
-	cHospital* Hswissmedical = new cHospital("Hospital swiss Medical", "Solis 223", ListasMedicos_swiss);
-	cHospital* Hmodelo = new cHospital("Sanatorio Modelo", "Colon 348", ListasMedicos_modelo);
+	cHospital* Hfavaloro = new cHospital("Hospital Favaloro", "Avenida Belgrano 234", 456789 ,ListaMedicos_favaloro);
+	cHospital* Hclinicas = new cHospital("Hospital de clinicas", "Avenida Paso 123", 456723,ListaMedicos_clinicas);
+	cHospital* Hswissmedical = new cHospital("Hospital swiss Medical", "Solis 223", 206789,ListasMedicos_swiss);
+	cHospital* Hmodelo = new cHospital("Sanatorio Modelo", "Colon 348", 355689,ListasMedicos_modelo);
 }
 
 

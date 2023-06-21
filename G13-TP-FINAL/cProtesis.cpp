@@ -24,8 +24,9 @@ ostream& operator<<(ostream& out, cListas<cProtesis>& Lista)
             << "\nMaterial: " << (Lista)[i].Material
             << "\nFabricante: " << (Lista)[i].Fabricante
             << "\nFecha de fabricacion: " << (Lista)[i].Fecha_fab
-           
+
             << "--------------------" << endl;
     }
 
     return out;
+}

@@ -1,11 +1,11 @@
 #include "cPaciente.h"
 
-cPaciente::cPaciente(string _Nombre, string _Apellido, const unsigned int _DNI, string _Alergia, string _Hospital, float _Radio): DNI(_DNI)
+cPaciente::cPaciente(string _Nombre, string _Apellido, const unsigned int _DNI, string _Alergia, float _Radio): DNI(_DNI)
 {
+	
 	this->Nombre = _Nombre; 
 	this->Apellido = _Apellido; 
 	this->Alergia = _Alergia; 
-	this->Hospital = _Hospital; 
 	this->Radio = _Radio; 
 
 	this->Protesis = NULL;
@@ -24,17 +24,17 @@ void cPaciente::PedirProtesis()
 ostream& operator<<(ostream& out, cListas<cPaciente>& Lista)
 {
 
-    for (int i = 0; i < Lista.Size(); i++) {
+	for (int i = 0; i < Lista.Size(); i++) {
 
 
-        out << "--------------------"
-            << "\nNombre: " << (Lista)[i].Nombre
-            << "\nApellido: " << (Lista)[i].Apellido
+		out << "--------------------"
+			<< "\nNombre: " << (Lista)[i].Nombre
+			<< "\nApellido: " << (Lista)[i].Apellido
 			<< "\nDNI: " << (Lista)[i].DNI
-            << "\nAlergia: " << (Lista)[i].Alergia
-			<< "\nHospital: " << (Lista)[i].Hospital
+			<< "\nAlergia: " << (Lista)[i].Alergia
 			<< "\nRadio: " << (Lista)[i].Radio
-            << "--------------------" << endl;
-    }
+			<< "--------------------" << endl;
+	}
 
-    return out;
+	return out;
+}

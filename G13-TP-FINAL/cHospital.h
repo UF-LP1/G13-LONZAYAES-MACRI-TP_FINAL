@@ -17,7 +17,7 @@ private:
 	cListas <cPaciente>* lista_Pacientes;
 
 public: 
-	cHospital(string _nombre, string _direccion, const unsigned int _Num_identificacion, cListas <cMedico> &_lista_Medicos, cListas <cPaciente> &_lista_Pacientes);
+	cHospital(string _nombre, string _direccion, const unsigned int _Num_identificacion, cListas <cMedico> &_lista_Medicos);
 	~cHospital(); 
 
 	void Agregar(cPaciente* Paciente);
