@@ -26,7 +26,7 @@ cMedico cHospital::AsignarMedico()
 
 	int Contador = 0;
 
-	for (int i = 0; i < this->lista_Medicos->Size(); i++) {
+	for (int i = 0; i < this->lista_Medicos->Size(); i++) { // volr el for
 
 		if (i == Aux)return (*lista_Medicos)[i];
 	}
