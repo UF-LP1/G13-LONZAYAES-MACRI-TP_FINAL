@@ -18,9 +18,11 @@ Orden de accion:
 int main() {
 
 	cListas <cFabricante> ListaFabricantes;
+	cListas <cOrtopedia> ListaOrtopedias;
 	
-	cListas <cHospital> ListaHospitales; 
-	cListas <cProtesis> ListaProtesis; 
+	cListas <cHospital> ListaHospitales;
+
+	cListas <cProtesis> ListaProtesis;
 
 	//----------------------------------- INICIALIZACION DE PACIENTES-----------------------------------------//
 	cPaciente* Paciente1 = new cPaciente("Rosario", "Lonzayes", 42833137, "titanio", 2); 
@@ -37,15 +39,44 @@ int main() {
 	cPaciente* Paciente12= new cPaciente("Sharpay", "Evans", 65233137, "ninguna", 0.9);
 //----------------------------------------------------------------------------------------------------------------//
 
+
 	CargarFabricantes(ListaFabricantes);
 
-	CargarHospitales(ListaHospitales); 
+	CargarHospitales(ListaHospitales);
 
-	 
-
-
+	CargarOrtopedias(ListaOrtopedias);
 
 
+	cANPA* ANPA = new cANPA(ListaOrtopedias, ListaHospitales, ListaFabricantes);
+
+
+	ANPA->AsignarHospital(Paciente1);
+
+
+	for (int i = 0; i < ListaHospitales.Size(); i++) {
+
+		(*ANPA->GetListaHospital())[i].ImprimirListaPacientes();
+	}
+
+
+
+
+	//----------------------------------- DELETES-----------------------------------------//
+
+	delete ANPA;
+
+	delete Paciente1;
+	delete Paciente2;
+	delete Paciente3;
+	delete Paciente4;
+	delete Paciente5;
+	delete Paciente6;
+	delete Paciente7;
+	delete Paciente8;
+	delete Paciente9;
+	delete Paciente10;
+	delete Paciente11;
+	delete Paciente12;
 
 
 	return 0;

@@ -33,3 +33,8 @@ cMedico cHospital::AsignarMedico()
 
 	return *Medico;
 }
+
+void cHospital::ImprimirListaPacientes()
+{
+	cout << this->lista_Pacientes << endl;
+}

@@ -23,6 +23,8 @@ public:
 	void Agregar(cPaciente* Paciente);
 
 	cMedico AsignarMedico();
+
+	void ImprimirListaPacientes();
 		
 };
 #endif

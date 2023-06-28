@@ -13,6 +13,8 @@
 
 using namespace std;
 
-void CargarFabricantes(cListas <cFabricante>& ListaFabricantes);
+void CargarFabricantes(cListas <cFabricante> &ListaFabricantes);
 
-void CargarHospitales(cListas <cHospital>& ListaHospitales); 
+void CargarHospitales(cListas <cHospital> &ListaHospitales);
+
+void CargarOrtopedias(cListas <cOrtopedia> &ListaOrtopedias);

@@ -1,6 +1,6 @@
 #include "Funciones.h"
 
-void CargarFabricantes(cListas<cFabricante>& ListaFabricantes)
+void CargarFabricantes(cListas<cFabricante> &ListaFabricantes)
 {
 
 	cFabricante* ImplantesOrtopedicos = new cFabricante("IMECO", "Calle Combet 7391", 8429);
@@ -13,12 +13,11 @@ void CargarFabricantes(cListas<cFabricante>& ListaFabricantes)
 	ListaFabricantes.Agregar(ProtesisDental);
 	ListaFabricantes.Agregar(ProtesisQuirurgica);
 
-
+	
 }
 
 
-
-void CargarHospitales(cListas <cHospital>& ListaHospitales) {
+void CargarHospitales(cListas <cHospital> &ListaHospitales) {
 
 /*en esta funcion cargamos por un lado listas con medicos para cada hospital y despues a
   cada hospital le cargamos su lista correspondiente de medicos (esto es para que todos los hospitales
@@ -77,6 +76,35 @@ void CargarHospitales(cListas <cHospital>& ListaHospitales) {
 	cHospital* Hclinicas = new cHospital("Hospital de clinicas", "Avenida Paso 123", 456723,ListaMedicos_clinicas);
 	cHospital* Hswissmedical = new cHospital("Hospital swiss Medical", "Solis 223", 206789,ListasMedicos_swiss);
 	cHospital* Hmodelo = new cHospital("Sanatorio Modelo", "Colon 348", 355689,ListasMedicos_modelo);
+
+	ListaHospitales.Agregar(Hfavaloro);
+	ListaHospitales.Agregar(Hclinicas);
+	ListaHospitales.Agregar(Hswissmedical);
+	ListaHospitales.Agregar(Hmodelo);
+
+}
+
+
+void CargarOrtopedias(cListas<cOrtopedia> &ListaOrtopedias)
+{
+
+	cListas <cProtesis> ListaProtesis1;
+	cListas <cProtesis> ListaProtesis2;
+	cListas <cProtesis> ListaProtesis3;
+
+	//Hacer objetos para cargar en las listas
+
+	cOrtopedia* ImplantesOrtopedicos = new cOrtopedia("Ortopedia ASTRAL", "Lautaro 410", 8029, ListaProtesis1);
+
+	cOrtopedia* ProtesisDental = new cOrtopedia("Ortopedia Rosario", "Rosario 888", 1474, ListaProtesis2);
+
+	cOrtopedia* ProtesisQuirurgica = new cOrtopedia("Ortopedia Palminteri", "Av.La Plata 418", 8036, ListaProtesis3);
+
+	ListaOrtopedias.Agregar(ImplantesOrtopedicos);
+	ListaOrtopedias.Agregar(ProtesisDental);
+	ListaOrtopedias.Agregar(ProtesisQuirurgica);
+
+
 }
 
 
