@@ -8,28 +8,36 @@
 
 using namespace std;
 
-class cHospital
+class cHospital 
 { 
+
 private: 
 	string nombre; 
 	string direccion; 
 	const unsigned int Num_identificacion; 
-	cListas <cMedico>* lista_Medicos;
-	cListas <cPaciente>* lista_Pacientes;
-	cListas<cOrtopedia>* lista_ortopedias; 
+	list <cMedico>* lista_Medicos;
+	list <cPaciente>* Lista_Pacientes;
+	list<cOrtopedia>* lista_ortopedias;
 	
-
 	//Agregar lista de ortopedias
 
 public: 
-	cHospital(string _nombre, string _direccion, const unsigned int _Num_identificacion, cListas <cMedico> &_lista_Medicos, cListas<cOrtopedia>&_lista_ortopedias);
+	cHospital(string _nombre, string _direccion, const unsigned int _Num_identificacion, list <cMedico> &_lista_Medicos, list<cOrtopedia>&_lista_ortopedias, list <cPaciente>& _Lista_Pacientes);
 	~cHospital(); 
-
-	void Agregar(cPaciente* Paciente);
 
 	cMedico AsignarMedico();
 
+	cProtesis OtorgarProtesis(cPaciente* Paciente);
+
+	cProtesis PedirProtesis(cProtesis* Protesis);
+
 	void ImprimirListaPacientes();
+
+	friend ostream& operator<<(ostream& out, list<cPaciente>& Lista);
+
+	void operator+(cPaciente* Paciente);
+
+	cPaciente operator[](int pos);
 		
 };
 #endif

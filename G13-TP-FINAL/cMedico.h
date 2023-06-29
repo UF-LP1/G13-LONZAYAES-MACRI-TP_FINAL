@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "cListas.h" 
+#include <list>
+#include "cQuirurgico.h"
+#include "cNo_Quirurgico.h"
 
 using namespace std;
 
@@ -18,6 +20,8 @@ public:
 	cMedico(string _Nombre, string _Apellido, const unsigned int _Matricula); 
 	~cMedico(); 
 
-	friend ostream& operator<<(ostream& out, cListas<cMedico>& Lista);
+	cProtesis AsiganarTipoProtesis(float Radio);
+
+	friend ostream& operator<<(ostream& out, list<cMedico>& Lista);
 };
 

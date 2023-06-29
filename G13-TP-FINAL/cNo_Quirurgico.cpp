@@ -1,6 +1,8 @@
 #include "cNo_Quirurgico.h"
 
-class cNo_Quirurgico::cNo_Quirurgico(float _Dimension, string _Material, string _Fabricante, cFecha& _Fecha_fab, bool _Robotizada)
-{}
-class ccNo_Quirurgico ::~cNo_Quirurgica()
-{}
+cNo_Quirurgico::cNo_Quirurgico(float _Dimension, string _Material, string _Fabricante, cFecha& _Fecha_fab, bool _Robotizada, string _Tipo) : cProtesis( _Dimension,  _Material,  _Fabricante,  _Fecha_fab, _Tipo)
+{
+	this->Robotizada = _Robotizada;
+}
+
+cNo_Quirurgico::~cNo_Quirurgico() {}

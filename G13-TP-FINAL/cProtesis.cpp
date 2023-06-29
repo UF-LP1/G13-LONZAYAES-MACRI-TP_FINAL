@@ -1,7 +1,7 @@
 
 #include "cProtesis.h"
 
-cProtesis::cProtesis(float _Dimension, string _Material, string _Fabricante, cFecha &_Fecha_fab)
+cProtesis::cProtesis(float _Dimension, string _Material, string _Fabricante, cFecha &_Fecha_fab, string Tipo)
 {
 	this->Dimension = _Dimension; 
 	this->Material = _Material;
@@ -13,17 +13,29 @@ cProtesis::cProtesis(float _Dimension, string _Material, string _Fabricante, cFe
 cProtesis:: ~cProtesis()
 {}
 
-ostream& operator<<(ostream& out, cListas<cProtesis>& Lista)
+float cProtesis::GetDimension()
+{
+    return this->Dimension;
+}
+
+string cProtesis::GetMaterial()
+{
+    return this->Material;
+}
+
+ostream& operator<<(ostream& out, list<cProtesis>& Lista)
 {
 
-    for (int i = 0; i < Lista.Size(); i++) {
+    typename::list<cProtesis>::iterator it;
+
+    for (it = Lista.begin(); it != Lista.end(); it++) {
 
 
         out << "--------------------"
-            << "\nDimension: " << (Lista)[i].Dimension
-            << "\nMaterial: " << (Lista)[i].Material
-            << "\nFabricante: " << (Lista)[i].Fabricante
-            << "\nFecha de fabricacion: " << (Lista)[i].Fecha_fab
+            << "\nDimension: " << it->Dimension
+            << "\nMaterial: " << it->Material
+            << "\nFabricante: " << it->Fabricante
+            << "\nFecha de fabricacion: " << it->Fecha_fab
 
             << "--------------------" << endl;
     }

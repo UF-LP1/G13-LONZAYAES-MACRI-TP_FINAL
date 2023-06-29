@@ -1,4 +1,5 @@
 #pragma once
+/*
 #include <list>
 #include <exception>
 #include <iostream>
@@ -18,6 +19,7 @@ protected:
 	//friend class cANPA; 
 	//friend class cHospital;
 	//friend class cRegistros;
+	//friend class cPaciente;
 
 public:
 
@@ -164,3 +166,4 @@ inline T cListas<T>::operator[](int pos)
 	
 }
 
+*/

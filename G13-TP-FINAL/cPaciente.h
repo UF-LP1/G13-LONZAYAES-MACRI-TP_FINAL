@@ -23,7 +23,17 @@ public:
 	cPaciente(string _Nombre, string _Apellido, const unsigned int _DNI, string _Alergia, float _Radio);
 	~cPaciente(); 
 
-	void PedirProtesis();
-	friend ostream& operator<<(ostream& out, cListas<cPaciente>& Lista);
+	void PedirProtesis(cProtesis* _Protesis);
+
+	string GetNombre();
+
+	string GetApellido();
+
+	string GetAlergia();
+
+	float GetRadio();
+
+	int GetDNI();
+	//friend ostream& operator<<(ostream& out, list<cPaciente>& Lista);
 };
 #endif

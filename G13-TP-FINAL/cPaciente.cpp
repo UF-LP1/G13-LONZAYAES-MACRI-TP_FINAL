@@ -16,25 +16,53 @@ cPaciente:: ~cPaciente(){
 	this->Protesis = NULL;
 }
 
-void cPaciente::PedirProtesis()
+void cPaciente::PedirProtesis(cProtesis* _Protesis)
 {
-	//this->Hospital
+	this->Protesis = _Protesis;
 }
 
-ostream& operator<<(ostream& out, cListas<cPaciente>& Lista)
+string cPaciente::GetNombre()
+{
+	return this->Nombre;
+}
+
+string cPaciente::GetApellido()
+{
+	return this->Apellido;
+}
+
+string cPaciente::GetAlergia()
+{
+	return this->Alergia;
+}
+
+float cPaciente::GetRadio()
+{
+	return this->Radio;
+}
+
+int cPaciente::GetDNI()
+{
+	return this->DNI;
+}
+
+
+/*ostream& operator<<(ostream& out, list<cPaciente>& Lista)
 {
 
-	for (int i = 0; i < Lista.Size(); i++) {
+	typename::list<cPaciente>::iterator it;
+
+	for (it = Lista.begin(); it != Lista.end(); it++) {
 
 
 		out << "--------------------"
-			<< "\nNombre: " << (Lista)[i].Nombre
-			<< "\nApellido: " << (Lista)[i].Apellido
-			<< "\nDNI: " << (Lista)[i].DNI
-			<< "\nAlergia: " << (Lista)[i].Alergia
-			<< "\nRadio: " << (Lista)[i].Radio
+			<< "\nNombre: " << it->Nombre
+			<< "\nApellido: " << it->Apellido
+			<< "\nDNI: " << it->DNI
+			<< "\nAlergia: " << it->Alergia
+			<< "\nRadio: " << to_string(it->Radio)
 			<< "--------------------" << endl;
 	}
 
 	return out;
-}
+}*/

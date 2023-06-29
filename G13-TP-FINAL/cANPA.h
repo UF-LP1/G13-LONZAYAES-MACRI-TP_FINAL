@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include "cListas.h"
+#include <list>
 #include "cRegistros.h"
 #include "cOrtopedia.h"
 #include "cHospital.h"
@@ -16,22 +16,23 @@ class cANPA
 {
 private:
 
-	cListas <cRegistros> *Lista_Registros;
-	cListas <cOrtopedia> *Lista_Ortopedias;
-	cListas <cHospital> *Lista_Hospitales;
-	cListas <cFabricante>* ListaFabricantes;
+	list <cRegistros> *Lista_Registros;
+	list <cHospital> *Lista_Hospitales;
+	list <cFabricante>* ListaFabricantes;
+
+	//friend class cPaciente;
 
 public:
 
-	cANPA(cListas <cOrtopedia> &_Lista_Ortopedias, cListas <cHospital> &_Lista_Hospitales, cListas <cFabricante> &_ListaFabricantes);
+	cANPA(list <cHospital> &_Lista_Hospitales, list <cFabricante> &_ListaFabricantes);
 
 	~cANPA();
 
-	void AgregarRegistro(cRegistros *Registro);
+	cHospital AsignarHospital();
 
-	void AsignarHospital(cPaciente *Paciente);
+	list <cHospital>* GetListaHospital();
 
-	cListas <cHospital>* GetListaHospital();
+	void operator+(cRegistros* Registro);
 
 
 };

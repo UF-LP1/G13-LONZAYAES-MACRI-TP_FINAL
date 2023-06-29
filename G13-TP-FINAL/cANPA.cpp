@@ -1,32 +1,39 @@
 #include "cANPA.h"
 
-cANPA::cANPA(cListas<cOrtopedia>& _Lista_Ortopedias, cListas<cHospital>& _Lista_Hospitales, cListas <cFabricante>& _ListaFabricantes)
+cANPA::cANPA(list<cHospital>& _Lista_Hospitales, list <cFabricante>& _ListaFabricantes)
 {
 	this->Lista_Registros = NULL;
-	this->Lista_Ortopedias = &_Lista_Ortopedias;
 	this->Lista_Hospitales = &_Lista_Hospitales;
 	this->ListaFabricantes = &_ListaFabricantes;
 }
 
 cANPA::~cANPA() {}
 
-void cANPA::AgregarRegistro(cRegistros *Registro)
+cHospital cANPA::AsignarHospital()
 {
-	
-	(*Lista_Registros) + Registro;
+
+	int Pos = rand() % this->Lista_Hospitales->size();
+
+	int Contador = 0;
+
+	typename::list<cHospital>::iterator it;
+
+	for (it = this->Lista_Hospitales->begin(); it != this->Lista_Hospitales->end(); it++) {
+
+		if (Pos == Contador)return *it;
+	}
+
 
 }
 
-void cANPA::AsignarHospital(cPaciente* Paciente)
-{
-
-	int Pos = rand() % this->Lista_Hospitales->Size();
-
-	(*Lista_Hospitales)[Pos].Agregar(Paciente);
-
-}
-
-cListas<cHospital>* cANPA::GetListaHospital()
+list<cHospital>* cANPA::GetListaHospital()
 {
 	return this->Lista_Hospitales;
 }
+
+void cANPA::operator+(cRegistros* Registro)
+{
+	this->Lista_Registros->push_back(*Registro);
+}
+
+

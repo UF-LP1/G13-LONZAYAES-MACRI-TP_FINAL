@@ -9,16 +9,27 @@ cMedico :: cMedico ( string _Nombre, string _Apellido, const unsigned int _Matri
 cMedico :: ~cMedico()
 {}
 
-ostream& operator<<(ostream & out, cListas<cMedico>&Lista)
+cProtesis cMedico::AsiganarTipoProtesis(float Radio)
+{
+    cQuirurgico* Tipo1 = nullptr;
+    cNo_Quirurgico* Tipo2 = nullptr;
+
+    if (Radio > 0)return *Tipo1;
+    else return *Tipo2;
+}
+
+ostream& operator<<(ostream & out, list<cMedico>&Lista)
 {
     
-    for (int i = 0; i < Lista.Size(); i++) {
+    typename::list<cMedico>::iterator it;
+
+    for (it = Lista.begin(); it != Lista.end(); it++) {
 
         
         out << "--------------------"
-            << "\nNombre: " << (Lista)[i].Nombre 
-            << "\nApellido: " << (Lista)[i].Apellido
-            << "\nMatricula: " << (Lista)[i].Matricula
+            << "\nNombre: " << it->Nombre 
+            << "\nApellido: " << it->Apellido
+            << "\nMatricula: " << it->Matricula
             << "--------------------" << endl;
     }
 

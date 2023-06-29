@@ -14,8 +14,6 @@
 
 using namespace std;
 
-void CargarFabricantes(cListas <cFabricante> &ListaFabricantes);
+list <cFabricante> CargarFabricantes(list <cFabricante> &ListaFabricantes);
 
-void CargarHospitales(cListas <cHospital> &ListaHospitales);
-
-void CargarOrtopedias(cListas <cOrtopedia> &ListaOrtopedias);
+list <cHospital> CargarHospitales(list <cHospital> &ListaHospitales);

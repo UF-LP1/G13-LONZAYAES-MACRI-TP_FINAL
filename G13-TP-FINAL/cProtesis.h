@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include "cFecha.h"
-#include "cListas.h"
+#include <list>
 
 class cProtesis
 {
@@ -13,10 +13,16 @@ private:
 	string Fabricante; 
 	cFecha *Fecha_fab;
 
+	string Tipo;
+
 public: 
-	cProtesis(float _Dimension, string _Material, string _Fabricante, cFecha &_Fecha_fab);
+	cProtesis(float _Dimension, string _Material, string _Fabricante, cFecha &_Fecha_fab, string Tipo);
 	~cProtesis(); 
 
-	friend ostream& operator<<(ostream& out, cListas<cProtesis>& Lista);
+	float GetDimension();
+
+	string GetMaterial();
+
+	friend ostream& operator<<(ostream& out, list<cProtesis>& Lista);
 };
 
