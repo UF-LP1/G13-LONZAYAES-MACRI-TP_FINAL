@@ -25,7 +25,7 @@ void CargarHospitales(cListas <cHospital> &ListaHospitales) {
   la idea es que todos los hospitales tengan listas de medicos distintas entre si !
 */
 
-
+	//Agregar ortopedias igual q con los medicos
 
 	cListas <cMedico> ListaMedicos_favaloro; 
 	cListas <cMedico> ListaMedicos_clinicas;
@@ -91,6 +91,10 @@ void CargarOrtopedias(cListas<cOrtopedia> &ListaOrtopedias)
 	cListas <cProtesis> ListaProtesis1;
 	cListas <cProtesis> ListaProtesis2;
 	cListas <cProtesis> ListaProtesis3;
+
+	cFecha* Fecha = new cFecha("3", "5", "2021");
+
+	cQuirurgico* Stend = new cQuirurgico("20x30", "Acero inoxidable", "IMECO", *Fecha);
 
 	//Hacer objetos para cargar en las listas
 

@@ -18,6 +18,8 @@ private:
 	cListas <cPaciente>* lista_Pacientes;
 	
 
+	//Agregar lista de ortopedias
+
 public: 
 	cHospital(string _nombre, string _direccion, const unsigned int _Num_identificacion, cListas <cMedico> &_lista_Medicos);
 	~cHospital(); 
