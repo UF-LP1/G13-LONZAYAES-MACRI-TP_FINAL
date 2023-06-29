@@ -18,7 +18,12 @@ Orden de accion:
 int main() {
 
 	cListas <cFabricante> ListaFabricantes;
-	cListas <cOrtopedia> ListaOrtopedias;
+	cListas <cOrtopedia> ListaOrtopedias; // esta lista tiene TODAS las ortopedias
+	cListas <cOrtopedia> ListaOrtopedias_favaloro; // estas son las listas de ortopedias para cada hospital asi no tienen todos los hospitales la misma lista
+	cListas <cOrtopedia> ListaOrtopedias_Clinicas;
+	cListas <cOrtopedia> ListaOrtopedias_Swiss;
+	cListas <cOrtopedia> ListaOrtopedias_Modelo;
+	
 	
 	cListas <cHospital> ListaHospitales;
 

@@ -4,6 +4,7 @@
 #include "cListas.h"
 #include "cMedico.h"
 #include "cPaciente.h"
+#include "cOrtopedia.h"
 
 using namespace std;
 
@@ -15,6 +16,7 @@ private:
 	const unsigned int Num_identificacion; 
 	cListas <cMedico>* lista_Medicos;
 	cListas <cPaciente>* lista_Pacientes;
+	
 
 public: 
 	cHospital(string _nombre, string _direccion, const unsigned int _Num_identificacion, cListas <cMedico> &_lista_Medicos);

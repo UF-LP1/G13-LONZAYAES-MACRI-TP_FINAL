@@ -94,16 +94,59 @@ void CargarOrtopedias(cListas<cOrtopedia> &ListaOrtopedias)
 
 	//Hacer objetos para cargar en las listas
 
-	cOrtopedia* ImplantesOrtopedicos = new cOrtopedia("Ortopedia ASTRAL", "Lautaro 410", 8029, ListaProtesis1);
+	cOrtopedia* ortopedia1 = new cOrtopedia("Ortopedia ASTRAL", "Lautaro 410", 8029, ListaProtesis1);
+    cOrtopedia* ortopedia2 = new cOrtopedia("Ortopedia Rosario", "Rosario 888", 1474, ListaProtesis2);
+    cOrtopedia* ortopedia3 = new cOrtopedia("Ortopedia Palminteri", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia3 = new cOrtopedia("Ortopedia Baez", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia4 = new cOrtopedia("Ortopedia Casasco", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia5 = new cOrtopedia("Ortopedia Pilot", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia6 = new cOrtopedia("Ortopedia Todo para el manco", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia7 = new cOrtopedia("Ortopedia Diaz", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia8 = new cOrtopedia("Ortopedia Uno", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia9 = new cOrtopedia("Ortopedia Sol", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia10 = new cOrtopedia("Ortopedia Rodriguez", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia11= new cOrtopedia("Ortopedia San Martin", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia12 = new cOrtopedia("Ortopedia Felicidad", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia13 = new cOrtopedia("Ortopedia laland", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia14 = new cOrtopedia("Ortopedia Barbie&co", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia15 = new cOrtopedia("Ortopedia Ken", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia16= new cOrtopedia("Ortopedia Ponyland", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia17 = new cOrtopedia("Ortopedia Hoy", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia18 = new cOrtopedia("Ortopedia Monte", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia19= new cOrtopedia("Ortopedia Vasca", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia20 = new cOrtopedia("Ortopedia Fourier", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia21 = new cOrtopedia("Ortopedia Gauss", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia22 = new cOrtopedia("Ortopedia Green", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia23 = new cOrtopedia("Ortopedia Stokes", "Av.La Plata 418", 8036, ListaProtesis3);
+	cOrtopedia* ortopedia24 = new cOrtopedia("Ortopedia Einstein", "Av.La Plata 418", 8036, ListaProtesis3);
 
-	cOrtopedia* ProtesisDental = new cOrtopedia("Ortopedia Rosario", "Rosario 888", 1474, ListaProtesis2);
+	// cargo en la lista de ortopedias TODAS las ortopedias
 
-	cOrtopedia* ProtesisQuirurgica = new cOrtopedia("Ortopedia Palminteri", "Av.La Plata 418", 8036, ListaProtesis3);
-
-	ListaOrtopedias.Agregar(ImplantesOrtopedicos);
-	ListaOrtopedias.Agregar(ProtesisDental);
-	ListaOrtopedias.Agregar(ProtesisQuirurgica);
-
+	ListaOrtopedias.Agregar(ortopedia1);
+	ListaOrtopedias.Agregar(ortopedia2);
+	ListaOrtopedias.Agregar(ortopedia3);
+	ListaOrtopedias.Agregar(ortopedia4);
+	ListaOrtopedias.Agregar(ortopedia5);
+	ListaOrtopedias.Agregar(ortopedia6);
+	ListaOrtopedias.Agregar(ortopedia7);
+	ListaOrtopedias.Agregar(ortopedia8);
+	ListaOrtopedias.Agregar(ortopedia9);
+	ListaOrtopedias.Agregar(ortopedia10);
+	ListaOrtopedias.Agregar(ortopedia11);
+	ListaOrtopedias.Agregar(ortopedia12);
+	ListaOrtopedias.Agregar(ortopedia13);
+	ListaOrtopedias.Agregar(ortopedia14);
+	ListaOrtopedias.Agregar(ortopedia15);
+	ListaOrtopedias.Agregar(ortopedia16);
+	ListaOrtopedias.Agregar(ortopedia17);
+	ListaOrtopedias.Agregar(ortopedia18);
+	ListaOrtopedias.Agregar(ortopedia19);
+	ListaOrtopedias.Agregar(ortopedia20);
+	ListaOrtopedias.Agregar(ortopedia21);
+	ListaOrtopedias.Agregar(ortopedia22);
+	ListaOrtopedias.Agregar(ortopedia23);
+	ListaOrtopedias.Agregar(ortopedia24);
+	
 
 }
 

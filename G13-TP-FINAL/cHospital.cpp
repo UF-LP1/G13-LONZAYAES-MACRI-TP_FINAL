@@ -5,7 +5,7 @@ cHospital::cHospital(string _Nombre, string _Direccion, const unsigned int _Num_
 {
 	this->nombre = _Nombre;
 	this->direccion = _Direccion;
-	this->lista_Medicos = &_Lista_Medicos;
+	this->lista_Medicos = &_Lista_Medicos; 
 
 }
 
