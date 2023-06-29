@@ -10,6 +10,7 @@
 #include "cPaciente.h"
 #include "cQuirurgico.h"
 #include "cRegistros.h"
+#include "cFecha.h"
 
 using namespace std;
 

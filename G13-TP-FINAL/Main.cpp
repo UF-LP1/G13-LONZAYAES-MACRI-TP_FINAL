@@ -25,6 +25,7 @@ int main() {
 	cListas <cProtesis> ListaProtesis;
 
 	//----------------------------------- INICIALIZACION DE PACIENTES-----------------------------------------//
+
 	cPaciente* Paciente1 = new cPaciente("Rosario", "Lonzayes", 42833137, "titanio", 2); 
 	cPaciente* Paciente2 = new cPaciente("Ana", "Perez", 45833137, "plastico", 0.5);
 	cPaciente* Paciente3 = new cPaciente("Clarita", "Crux", 42833667, "ninguna", 0);
@@ -37,6 +38,7 @@ int main() {
 	cPaciente* Paciente10 = new cPaciente("Franco", "Pessana", 33233137, "ninguna",0);
 	cPaciente* Paciente11= new cPaciente("Troy", "Bolton", 23543137, "ninguna", 0);
 	cPaciente* Paciente12= new cPaciente("Sharpay", "Evans", 65233137, "ninguna", 0.9);
+
 //----------------------------------------------------------------------------------------------------------------//
 
 
