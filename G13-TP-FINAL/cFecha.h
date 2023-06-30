@@ -9,13 +9,13 @@ class cFecha
 
 private:
 
-	string dia;
-	string mes;
-	string anyo;
+	int dia;
+	int mes;
+	int anyo;
 
 public:
 
-	cFecha(string _Dia, string _Mes, string _Anyo);
+	cFecha(int _Dia, int _Mes, int _Anyo);
 	~cFecha();
 
 };

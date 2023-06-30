@@ -1,7 +1,7 @@
 #include "cFecha.h"
 
 
-cFecha::cFecha(string _Dia, string _Mes, string _Anyo)
+cFecha::cFecha(int _Dia, int _Mes, int _Anyo)
 {
 	this->dia = _Dia; 
 	this->mes = _Mes; 

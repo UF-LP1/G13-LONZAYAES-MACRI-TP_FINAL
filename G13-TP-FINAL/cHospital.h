@@ -25,11 +25,15 @@ public:
 	cHospital(string _nombre, string _direccion, const unsigned int _Num_identificacion, list <cMedico> &_lista_Medicos, list<cOrtopedia>&_lista_ortopedias, list <cPaciente>& _Lista_Pacientes);
 	~cHospital(); 
 
+	string GetNombre();
+
 	cMedico AsignarMedico();
 
-	cProtesis OtorgarProtesis(cPaciente* Paciente);
+	cProtesis ElegirProtesis(cPaciente* Paciente);
 
-	cProtesis PedirProtesis(cProtesis* Protesis);
+	cProtesis* PedirProtesis(cPaciente* Paciente);
+
+	bool BuscarPaciente(int DNI);
 
 	void ImprimirListaPacientes();
 

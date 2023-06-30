@@ -20,6 +20,8 @@ public:
 	cMedico(string _Nombre, string _Apellido, const unsigned int _Matricula); 
 	~cMedico(); 
 
+	string GetNombre();
+
 	cProtesis AsiganarTipoProtesis(float Radio);
 
 	friend ostream& operator<<(ostream& out, list<cMedico>& Lista);

@@ -51,18 +51,18 @@ int main() {
 	list <cProtesis> ListaProtesis2;
 	list <cProtesis> ListaProtesis3;
 
-	cPaciente* Paciente1 = new cPaciente("Rosario", "Lonzayes", 42833137, "titanio", 2);
-	cPaciente* Paciente2 = new cPaciente("Ana", "Perez", 45833137, "plastico", 0.5);
-	cPaciente* Paciente3 = new cPaciente("Clarita", "Crux", 42833667, "ninguna", 0);
-	cPaciente* Paciente4 = new cPaciente("Poni", "Ponex", 44563137, "titanio", 3);
-	cPaciente* Paciente5 = new cPaciente("Cindy", "Aldet", 42833987, "titanio", 2);
-	cPaciente* Paciente6 = new cPaciente("Pampa", "Pamplix", 32433137, "ninguna", 0.7);
-	cPaciente* Paciente7 = new cPaciente("Ezequiel", "Str", 42571137, "titanio", 0);
-	cPaciente* Paciente8 = new cPaciente("Sol", "Segura", 42833222, "acero", 4);
-	cPaciente* Paciente9 = new cPaciente("Sol", "Mala", 42831627, "cobalto", 2.6);
-	cPaciente* Paciente10 = new cPaciente("Franco", "Pessana", 33233137, "ninguna", 0);
-	cPaciente* Paciente11 = new cPaciente("Troy", "Bolton", 23543137, "ninguna", 0);
-	cPaciente* Paciente12 = new cPaciente("Sharpay", "Evans", 65233137, "ninguna", 0.9);
+	cPaciente* Paciente1 = new cPaciente("Rosario", "Lonzayes", 42833137, "titanio", 2, "Pie");
+	cPaciente* Paciente2 = new cPaciente("Ana", "Perez", 45833137, "plastico", 0.5, "Mano");
+	cPaciente* Paciente3 = new cPaciente("Clarita", "Crux", 42833667, "ninguna", 0, "Cadera");
+	cPaciente* Paciente4 = new cPaciente("Poni", "Ponex", 44563137, "titanio", 3, "Brazo");
+	cPaciente* Paciente5 = new cPaciente("Cindy", "Aldet", 42833987, "titanio", 2, "Pierna");
+	cPaciente* Paciente6 = new cPaciente("Pampa", "Pamplix", 32433137, "ninguna", 0.7, "Mano");
+	cPaciente* Paciente7 = new cPaciente("Ezequiel", "Str", 42571137, "titanio", 0, "Tibia");
+	cPaciente* Paciente8 = new cPaciente("Sol", "Segura", 42833222, "acero", 4, "Pie");
+	cPaciente* Paciente9 = new cPaciente("Sol", "Mala", 42831627, "cobalto", 2.6, "Pierna");
+	cPaciente* Paciente10 = new cPaciente("Franco", "Pessana", 33233137, "ninguna", 0, "Cubito");
+	cPaciente* Paciente11 = new cPaciente("Troy", "Bolton", 23543137, "ninguna", 0, "Perone");
+	cPaciente* Paciente12 = new cPaciente("Sharpay", "Evans", 65233137, "ninguna", 0.9, "Mano");
 
 	ListaPacientes_favaloro.push_back(*Paciente1);
 	ListaPacientes_favaloro.push_back(*Paciente2);
@@ -123,19 +123,19 @@ int main() {
 	ListasMedicos_swiss.push_back(*Medico16);
 
 
-	cFecha* Fecha1 = new cFecha("3", "5", "2021");
-	cFecha* Fecha2 = new cFecha("3", "6", "2020");
-	cFecha* Fecha3 = new cFecha("4", "7", "2023");
-	cFecha* Fecha4 = new cFecha("4", "8", "2021");
-	cFecha* Fecha5 = new cFecha("5", "9", "2021");
-	cFecha* Fecha6 = new cFecha("6", "10", "2019");
-	cFecha* Fecha7 = new cFecha("7", "11", "2020");
-	cFecha* Fecha8 = new cFecha("8", "12", "2023");
-	cFecha* Fecha9 = new cFecha("9", "13", "2022");
-	cFecha* Fecha10 = new cFecha("9", "12", "2022");
-	cFecha* Fecha11 = new cFecha("10", "02", "2022");
-	cFecha* Fecha12 = new cFecha("11", "05", "2022");
-	cFecha* Fecha13 = new cFecha("31", "06", "2021");
+	cFecha* Fecha1 = new cFecha(3, 5, 2021);
+	cFecha* Fecha2 = new cFecha(3, 6, 2020);
+	cFecha* Fecha3 = new cFecha(4, 7, 2023);
+	cFecha* Fecha4 = new cFecha(4, 8, 2021);
+	cFecha* Fecha5 = new cFecha(5, 9, 2021);
+	cFecha* Fecha6 = new cFecha(6, 10, 2019);
+	cFecha* Fecha7 = new cFecha(7, 11, 2020);
+	cFecha* Fecha8 = new cFecha(8,12, 2023);
+	cFecha* Fecha9 = new cFecha(9, 13, 2022);
+	cFecha* Fecha10 = new cFecha(9, 12, 2022);
+	cFecha* Fecha11 = new cFecha(10, 02, 2022);
+	cFecha* Fecha12 = new cFecha(11, 05, 2022);
+	cFecha* Fecha13 = new cFecha(31, 06, 2021);
 
 	// protesis 
 
@@ -242,17 +242,44 @@ int main() {
 	ListaHospitales.push_back(*Hswissmedical);
 	ListaHospitales.push_back(*Hmodelo);
 
+	list <cPaciente> ListaPacientes;
+
+	ListaPacientes.push_back(*Paciente1);
+	ListaPacientes.push_back(*Paciente2);
+	ListaPacientes.push_back(*Paciente3);
+	ListaPacientes.push_back(*Paciente4);
+	ListaPacientes.push_back(*Paciente5);
+	ListaPacientes.push_back(*Paciente6);
+	ListaPacientes.push_back(*Paciente7);
+	ListaPacientes.push_back(*Paciente8);
+	ListaPacientes.push_back(*Paciente9);
+	ListaPacientes.push_back(*Paciente10);
+	ListaPacientes.push_back(*Paciente11);
+	ListaPacientes.push_back(*Paciente12);
+
 	cANPA* ANPA = new cANPA(ListaHospitales, ListaFabricantes);
 
-	typename::list<cHospital>::iterator it;
+	std::list<cHospital>::iterator it1;
+	std::list<cPaciente>::iterator it2;
 
-	for (it = ANPA->GetListaHospital()->begin(); it != ANPA->GetListaHospital()->end(); it++) {
+	for (it1 = ANPA->GetListaHospital()->begin(); it1 != ANPA->GetListaHospital()->end(); it1++) {
 
-		
-		cProtesis Aux = it->OtorgarProtesis(Paciente1);
+		for (it2 = ListaPacientes.begin(); it2 != ListaPacientes.end(); it2++) {
 
-		Paciente1->PedirProtesis(&Aux);
+			if (it1->BuscarPaciente(it2->GetDNI())) {
+
+				if (it1->PedirProtesis(Paciente1) != nullptr) {
+
+					Paciente1->PedirProtesis(it1->PedirProtesis(Paciente1));
+
+				}
+				Paciente1->PedirProtesis(ANPA->AsignarFabricante().DiseñarProtesis(it1->ElegirProtesis(Paciente1), Paciente1->GetRadio(), Paciente1->GetAlergia(), Paciente1->GetMiembro()));
+			}
+		}
 	}
+
+	cout << ""
+
 
 
 	//----------------------------------- DELETES-----------------------------------------//

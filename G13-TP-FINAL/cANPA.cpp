@@ -26,9 +26,35 @@ cHospital cANPA::AsignarHospital()
 
 }
 
+void cANPA::Registrar(cHospital Hospital, cMedico Medico, cFecha FechaS, cFecha FechaE, bool Entregado, cPaciente Paciente)
+{
+	//cRegistros(cHospital & _Hospital, cMedico & _Medico, cFecha & _Fecha_sol, cFecha & _Fecha_est_entrega, bool _Entregada, cPaciente & _Paciente);
+	cRegistros* Registro = new cRegistros(Hospital, Medico, FechaS, FechaE, Entregado, Paciente);
+
+	this->Lista_Registros->push_back(*Registro);
+}
+
 list<cHospital>* cANPA::GetListaHospital()
 {
 	return this->Lista_Hospitales;
+}
+
+cFabricante cANPA::AsignarFabricante()
+{
+
+	int Aux = rand() % this->ListaFabricantes->size();
+
+	int Contador = 0;
+
+
+	for (std::list<cFabricante>::iterator it = this->ListaFabricantes->begin(); it != this->ListaFabricantes->end(); it++) {
+
+		if (Aux == Contador) {
+
+			return *it;
+		}
+	}
+
 }
 
 void cANPA::operator+(cRegistros* Registro)

@@ -1,6 +1,6 @@
 #include "cPaciente.h"
 
-cPaciente::cPaciente(string _Nombre, string _Apellido, const unsigned int _DNI, string _Alergia, float _Radio): DNI(_DNI)
+cPaciente::cPaciente(string _Nombre, string _Apellido, const unsigned int _DNI, string _Alergia, float _Radio, string Tipo): DNI(_DNI)
 {
 	
 	this->Nombre = _Nombre; 
@@ -44,6 +44,11 @@ float cPaciente::GetRadio()
 int cPaciente::GetDNI()
 {
 	return this->DNI;
+}
+
+string cPaciente::GetMiembro()
+{
+	return this->Tipo;
 }
 
 

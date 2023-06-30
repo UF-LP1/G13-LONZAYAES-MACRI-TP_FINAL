@@ -28,7 +28,11 @@ public:
 
 	~cANPA();
 
+	void Registrar(cHospital Hospital, cMedico Medico, cFecha FechaS, cFecha FechaE, bool Entregado, cPaciente Paciente);
+
 	cHospital AsignarHospital();
+
+	cFabricante AsignarFabricante();
 
 	list <cHospital>* GetListaHospital();
 

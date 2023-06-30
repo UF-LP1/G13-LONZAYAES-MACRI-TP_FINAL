@@ -13,6 +13,11 @@ cHospital::cHospital(string _Nombre, string _Direccion, const unsigned int _Num_
 
 cHospital :: ~cHospital() {}
 
+string cHospital::GetNombre()
+{
+	return this->nombre;
+}
+
 cMedico cHospital::AsignarMedico()
 {
 	cMedico *Medico = NULL;
@@ -31,7 +36,7 @@ cMedico cHospital::AsignarMedico()
 	return *Medico;
 }
 
-cProtesis cHospital::OtorgarProtesis(cPaciente* Paciente)
+cProtesis cHospital::ElegirProtesis(cPaciente* Paciente)
 {
 	cMedico Medico = AsignarMedico();
 
@@ -42,9 +47,33 @@ cProtesis cHospital::OtorgarProtesis(cPaciente* Paciente)
 		}
 }
 
-cProtesis cHospital::PedirProtesis(cProtesis* Protesis)
+cProtesis* cHospital::PedirProtesis(cPaciente* Paciente)
 {
-	return cProtesis();
+	cProtesis Protesis = ElegirProtesis(Paciente);
+
+	cProtesis* Aux = nullptr;
+
+	std::list<cOrtopedia>::iterator it = this->lista_ortopedias->begin();
+
+	for (it; it != this->lista_ortopedias->end(); it++) {
+
+		if (it->BuscarProtesis(Protesis, Paciente->GetRadio(), Paciente->GetAlergia()) != nullptr) {
+
+			return it->BuscarProtesis(Protesis, Paciente->GetRadio(), Paciente->GetAlergia());
+		}
+	}
+	return Aux;
+}
+
+bool cHospital::BuscarPaciente(int DNI)
+{
+	std::list<cPaciente>::iterator it = this->Lista_Pacientes->begin();
+
+	for (it; it != this->Lista_Pacientes->end(); it++) {
+
+		if (it->GetDNI() == DNI)return true;
+	}
+	return false;
 }
 
 void cHospital::ImprimirListaPacientes()
@@ -64,6 +93,8 @@ void cHospital::ImprimirListaPacientes()
 			<< "--------------------" << endl;
 	}
 }
+
+
 
 void cHospital::operator+(cPaciente* Paciente)
 {

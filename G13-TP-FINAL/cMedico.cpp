@@ -9,6 +9,11 @@ cMedico :: cMedico ( string _Nombre, string _Apellido, const unsigned int _Matri
 cMedico :: ~cMedico()
 {}
 
+string cMedico::GetNombre()
+{
+    return this->Nombre;
+}
+
 cProtesis cMedico::AsiganarTipoProtesis(float Radio)
 {
     cQuirurgico* Tipo1 = nullptr;
