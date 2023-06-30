@@ -36,6 +36,8 @@ public:
 
 	int GetDNI();
 
+	void ImprimirPaciente();
+
 	string GetMiembro();
 	//friend ostream& operator<<(ostream& out, list<cPaciente>& Lista);
 };

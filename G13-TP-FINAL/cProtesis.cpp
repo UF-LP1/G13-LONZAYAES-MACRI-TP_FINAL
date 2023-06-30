@@ -23,6 +23,20 @@ string cProtesis::GetMaterial()
     return this->Material;
 }
 
+void cProtesis::SetDimension(float _Dimension)
+{
+    this->Dimension = _Dimension;
+}
+
+void cProtesis::ImprimirProtesis()
+{
+    cout << "\nTipo de protesis: " << this->Tipo
+        << "\nDimension: " << to_string(this->Dimension)
+        << "\nMaterial: " << this->Material
+        << "\nFabricante: " << this->Fabricante << endl;
+
+}
+
 ostream& operator<<(ostream& out, list<cProtesis>& Lista)
 {
 

@@ -35,6 +35,8 @@ public:
 
 	bool BuscarPaciente(int DNI);
 
+	cPaciente GetPaciente(int DNI);
+
 	void ImprimirListaPacientes();
 
 	friend ostream& operator<<(ostream& out, list<cPaciente>& Lista);

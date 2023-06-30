@@ -76,6 +76,17 @@ bool cHospital::BuscarPaciente(int DNI)
 	return false;
 }
 
+cPaciente cHospital::GetPaciente(int DNI)
+{
+
+	for (std::list<cPaciente>::iterator it = this->Lista_Pacientes->begin(); it != this->Lista_Pacientes->end(); it++) {
+
+		if (it->GetDNI() == DNI)return *it;
+
+	}
+	
+}
+
 void cHospital::ImprimirListaPacientes()
 {
 	//cout << (*Lista_Pacientes) << endl;   asi se implementaria la sobrecarga del cout (tira error)

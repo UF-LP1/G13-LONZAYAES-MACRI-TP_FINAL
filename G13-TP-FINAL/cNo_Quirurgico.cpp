@@ -6,3 +6,10 @@ cNo_Quirurgico::cNo_Quirurgico(float _Dimension, string _Material, string _Fabri
 }
 
 cNo_Quirurgico::~cNo_Quirurgico() {}
+
+void cNo_Quirurgico::Service()
+{
+	this->SetDimension(this->GetDimension() / 2);
+}
+
+

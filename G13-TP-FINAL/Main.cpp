@@ -130,7 +130,7 @@ int main() {
 	cFecha* Fecha5 = new cFecha(5, 9, 2021);
 	cFecha* Fecha6 = new cFecha(6, 10, 2019);
 	cFecha* Fecha7 = new cFecha(7, 11, 2020);
-	cFecha* Fecha8 = new cFecha(8,12, 2023);
+	cFecha* Fecha8 = new cFecha(8, 12, 2023);
 	cFecha* Fecha9 = new cFecha(9, 13, 2022);
 	cFecha* Fecha10 = new cFecha(9, 12, 2022);
 	cFecha* Fecha11 = new cFecha(10, 02, 2022);
@@ -278,15 +278,107 @@ int main() {
 		}
 	}
 
-	cout << ""
+	cout << "--Bienvenido al sistema de registro del ANPA--"
+		<< "\n1.Agregar Paciente"
+		<< "\n2.Buscar Paciente"
+		<< "\n3.Asignar Protesis"
+		<< "\n4.Lista de pacientes"
+		<< "\n5.Lista de protesis" << endl;
+
+	int opcion = 0;
+
+	cin >> opcion;
+
+	if (opcion > 0 || opcion < 5)
+	{
+		if (opcion == 1) {
+
+			string Nombre = "";
+			string Apellido = "";
+			unsigned int DNI = 0;
+			string Alergia = "";
+			float Radio = 0;
+			string Tipo = "";
+
+			cout << "\nNombre: " << endl;
+			cin >> Nombre;
+			cout << "\nApellido:" << endl;
+			cin >> Apellido;
+			cout << "\nDNI:" << endl;
+			cin >> DNI;
+			cout << "\nAlergia: " << endl;
+			cin >> Alergia;
+			cout << "\nRadio de la amputacion (Si es quirurgico poner cero)" << endl;
+			cin >> Radio;
+			cout << "\nTipo de protesis" << endl;
+
+			cPaciente* NuevoPaciente = new cPaciente(Nombre, Apellido, DNI, Alergia, Radio, Tipo);
+
+			ANPA->AgregarPaciente(NuevoPaciente);
+
+		}
+
+		if (opcion == 2) {
+
+			cout << "\nIngrese el DNI del paciente a buscar:" << endl;
+			int dni = 0;
+
+			std::list<cHospital>::iterator it;
+			for (it = ANPA->GetListaHospital()->begin(); it != ANPA->GetListaHospital()->end(); it++) {
+
+				if (it->BuscarPaciente(dni)) {
+
+					it->GetPaciente(dni).ImprimirPaciente();
+				}
+			}
+			if (dni == 0)cout << "El paciente no se encontro." << endl;
+		}
+
+		if (opcion == 3) {
+
+			cout << "\nIngrese el DNI del paciente a para asignarle una protesis:" << endl;
+			int dni = 0;
+
+			std::list<cHospital>::iterator it1;
+			for (it1 = ANPA->GetListaHospital()->begin(); it1 != ANPA->GetListaHospital()->end(); it1++) {
+
+				if (it1->BuscarPaciente(dni)) {
+
+					cout << "\nEl paciente: " << it1->GetPaciente(dni).GetNombre() << " " << it1->GetPaciente(dni).GetApellido() << " fue encontrado."
+						<< "Seleccione una protesis para asignarle." << endl;
+
+					std::list<cProtesis>::iterator it2;
+					for (it2 = ListaProtesis1.begin(); it2 != ListaProtesis1.end(); it2++) {
+
+						it2->ImprimirProtesis();
+						string Respuesta = "";
+						cout << "\nSi desea esta protesis ingrese SI" << endl;
+
+						if (Respuesta == "SI") {
+
+							cProtesis Aux = *it2;
+
+							it1->GetPaciente(dni).PedirProtesis(&Aux);
+
+						}
+					}
+					if (dni == 0)cout << "El paciente no se encontro." << endl;
+					else {
+
+					}
+				}
+			}
+		}
+		else { cout << "\nOpcion invalida." << endl; }
 
 
 
-	//----------------------------------- DELETES-----------------------------------------//
+		//----------------------------------- DELETES-----------------------------------------//
 
-	delete ANPA;
+		delete ANPA;
 
-	
 
-	return 0;
-};
+
+		return 0;
+	};
+}

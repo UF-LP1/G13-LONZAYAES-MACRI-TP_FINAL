@@ -23,6 +23,12 @@ public:
 
 	string GetMaterial();
 
+	void SetDimension(float _Dimension);
+
+	//virtual bool Service() = 0;
+
+	void ImprimirProtesis();
+
 	friend ostream& operator<<(ostream& out, list<cProtesis>& Lista);
 };
 

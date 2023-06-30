@@ -11,5 +11,8 @@ public :
 
     ~cNo_Quirurgico();
 
+    void Service();
+
+
 };
 

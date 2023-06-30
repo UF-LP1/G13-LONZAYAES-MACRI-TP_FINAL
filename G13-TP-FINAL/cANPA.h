@@ -28,7 +28,9 @@ public:
 
 	~cANPA();
 
-	void Registrar(cHospital Hospital, cMedico Medico, cFecha FechaS, cFecha FechaE, bool Entregado, cPaciente Paciente);
+	void AgregarPaciente(cPaciente* Paciente);
+
+	void Registrar(cHospital Hospital, cMedico Medico, cFecha FechaS, int FechaE, bool Entregado, cPaciente Paciente);
 
 	cHospital AsignarHospital();
 

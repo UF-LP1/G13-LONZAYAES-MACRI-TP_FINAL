@@ -26,7 +26,15 @@ cHospital cANPA::AsignarHospital()
 
 }
 
-void cANPA::Registrar(cHospital Hospital, cMedico Medico, cFecha FechaS, cFecha FechaE, bool Entregado, cPaciente Paciente)
+void cANPA::AgregarPaciente(cPaciente* Paciente)
+{
+	cHospital Hospital = this->AsignarHospital();
+
+	if(Hospital.BuscarPaciente(Paciente->GetDNI())) Hospital + Paciente;
+
+}
+
+void cANPA::Registrar(cHospital Hospital, cMedico Medico, cFecha FechaS, int FechaE, bool Entregado, cPaciente Paciente)
 {
 	//cRegistros(cHospital & _Hospital, cMedico & _Medico, cFecha & _Fecha_sol, cFecha & _Fecha_est_entrega, bool _Entregada, cPaciente & _Paciente);
 	cRegistros* Registro = new cRegistros(Hospital, Medico, FechaS, FechaE, Entregado, Paciente);

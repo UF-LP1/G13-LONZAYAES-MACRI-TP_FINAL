@@ -8,3 +8,11 @@ cQuirurgico::cQuirurgico(float _Dimension, string _Material, string _Fabricante,
 cQuirurgico::~cQuirurgico()
 {
 }
+
+bool cQuirurgico::Service()
+{
+	int probabilidad = rand() % 2;
+
+	if (probabilidad == 0)return true;
+	else return false;
+}

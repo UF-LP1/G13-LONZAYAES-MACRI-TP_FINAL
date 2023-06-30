@@ -51,6 +51,17 @@ string cPaciente::GetMiembro()
 	return this->Tipo;
 }
 
+void cPaciente::ImprimirPaciente() {
+
+		cout << "--------------------"
+			<< "\nNombre: " << this->Nombre
+			<< "\nApellido: " << this->Apellido
+			<< "\nDNI: " << this->DNI
+			<< "--------------------" << endl;
+	
+
+
+}
 
 /*ostream& operator<<(ostream& out, list<cPaciente>& Lista)
 {
